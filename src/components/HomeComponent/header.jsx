@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true); // State to control visibility
-    const [lastScrollY, setLastScrollY] = useState(0); // Track the last scroll position
+    const [lastScrollY, setLastScrollY] = useState(10); // Track the last scroll position
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
