@@ -12,9 +12,9 @@ import VideoSection from "../components/HomeComponent/video";
 // App Component
 const Home = () => {
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen overflow-hidden  bg-gray-100">
             <Header />
-            <main className="container mx-auto py-8">
+            <main className="container mx-auto px-2">
                 <HeroSection />
                 <AboutSection />
                 <ServicesSection />
