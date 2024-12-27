@@ -9,20 +9,23 @@ import TestimonialsSection from "../components/HomeComponent/testimonials";
 import VideoSection from "../components/HomeComponent/video";
 
 
+// App Component
 const Home = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-gray-100">
             <Header />
-            <HeroSection />
-            <AboutSection />
-            <ServicesSection />
-            <TestimonialsSection />
-            <GallerySection />
-            <VideoSection />
-            <ContactSection />
+            <main className="container mx-auto py-8">
+                <HeroSection />
+                <AboutSection />
+                <ServicesSection />
+                <TestimonialsSection />
+                <GallerySection />
+                <VideoSection />
+                <ContactSection />
+            </main>
             <Footer />
         </div>
     );
 };
 
-export default Home;
+export default Home
