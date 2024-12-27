@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true); // State to control visibility
-    const [lastScrollY, setLastScrollY] = useState(10); // Track the last scroll position
+    const [lastScrollY, setLastScrollY] = useState(0); // Track the last scroll position
+    const [scrollingDown, setScrollingDown] = useState(false); // Track if scrolling down
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -12,11 +13,15 @@ const Header = () => {
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
 
-        if (currentScrollY > lastScrollY) {
-            // Scrolling down, hide header
-            setIsVisible(false);
+        if (currentScrollY > 200) {
+            // If the scroll position is greater than 10, hide the header when scrolling down
+            if (currentScrollY > lastScrollY) {
+                setIsVisible(false); // Scrolling down, hide header
+            } else {
+                setIsVisible(true); // Scrolling up, show header
+            }
         } else {
-            // Scrolling up, show header
+            // When scroll position is less than 10, make sure the header is visible
             setIsVisible(true);
         }
 
