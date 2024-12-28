@@ -7,19 +7,29 @@ import Header from "../components/HomeComponent/header";
 import HeroSection from "../components/HomeComponent/hero";
 import TestimonialsSection from "../components/HomeComponent/testimonials";
 import VideoSection from "../components/HomeComponent/video";
-
-
-// App Component
+import Properties from "../components/HomeComponent/Properties";
+import Loader from "../components/HomeComponent/Loader";
+import Blog from "../components/HomeComponent/blog";
+import Locations from "../components/HomeComponent/location";
+import AnimatedTestimonialsDemo from "../components/HomeComponent/demo";
+import CompareDemo from "../components/aceternity/beforeAfter/before";
 const Home = () => {
     return (
-        <div className="min-h-screen overflow-hidden  bg-gray-100">
+        <div className="min-h-screen overflow-hidden  bg-blue-[221.2 83.2% 53.3%]">
+            <Loader />
             <Header />
-            <main className="container mx-auto px-2">
-                <HeroSection />
+            <HeroSection />
+            <main className="container mx-auto px-8">
                 <AboutSection />
                 <ServicesSection />
+                <Properties />
+                <Locations />
+                <CompareDemo />
                 <TestimonialsSection />
                 <GallerySection />
+                <AnimatedTestimonialsDemo />
+                <GallerySection />
+                <Blog />
                 <VideoSection />
                 <ContactSection />
             </main>

@@ -1,102 +1,97 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Header = () => {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [isVisible, setIsVisible] = useState(true); // State to control visibility
-    const [lastScrollY, setLastScrollY] = useState(0); // Track the last scroll position
-    const [scrollingDown, setScrollingDown] = useState(false); // Track if scrolling down
-
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
-
-    const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-
-        if (currentScrollY > 200) {
-            // If the scroll position is greater than 10, hide the header when scrolling down
-            if (currentScrollY > lastScrollY) {
-                setIsVisible(false); // Scrolling down, hide header
-            } else {
-                setIsVisible(true); // Scrolling up, show header
-            }
-        } else {
-            // When scroll position is less than 10, make sure the header is visible
-            setIsVisible(true);
-        }
-
-        setLastScrollY(currentScrollY);
-    };
-
-    useEffect(() => {
-        // Add scroll event listener
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            // Clean up the event listener
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [lastScrollY]);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <>
-            {/* Header */}
-            <header
-                className={`bg-blue-900 text-white p-4 fixed w-full z-10 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
-                    }`}
-            >
-                <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-2xl font-bold">Goke-Properties</h1>
-                    {/* Hamburger Button */}
-                    <button
-                        className="sm:hidden text-white text-2xl focus:outline-none"
-                        onClick={toggleSidebar}
-                    >
-                        ☰
-                    </button>
-                    {/* Desktop Navigation */}
-                    <nav className="hidden sm:flex space-x-4">
-                        <a href="#hero" className="hover:underline">Home</a>
-                        <a href="#about" className="hover:underline">About</a>
-                        <a href="#services" className="hover:underline">Services</a>
-                        <a href="#testimonials" className="hover:underline">Testimonials</a>
-                        <a href="#gallery" className="hover:underline">Gallery</a>
-                        <a href="#contact" className="hover:underline">Contact</a>
-                    </nav>
-                </div>
-            </header>
+        <header className="bg-black md:h-[100px] text-white md:mb-[3.5rem] shadow-md">
+            <div className="container mx-auto px-4">
+                {/* Top Section: Logo and Contact Info */}
+                <div className="flex m-auto sm:w-full  lg:w-[50%] bg-black items-center  justify-between py-4">
+                    {/* Logo Section */}
+                    <div className="flex  items-center">
+                        <img
+                            src="path/to/logo.png" // Replace with your logo path
+                            alt="Logo"
+                            className="h-10"
+                        />
+                        <h1 className="text-lg font-bold uppercase ml-2">
+                            Goke-Properties
+                        </h1>
+                    </div>
 
-            {/* Sidebar */}
-            <aside
-                className={`fixed top-0 left-0 h-full bg-blue-900 text-white w-64 z-20 transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-                    } transition-transform duration-300 sm:hidden`}
-            >
-                <div className="p-4">
-                    <button
-                        className="text-2xl focus:outline-none mb-4"
-                        onClick={toggleSidebar}
-                    >
-                        ✕
-                    </button>
-                    <nav className="space-y-4">
-                        <a href="#hero" className="block hover:underline">Home</a>
-                        <a href="#about" className="block hover:underline">About</a>
-                        <a href="#services" className="block hover:underline">Services</a>
-                        <a href="#testimonials" className="block hover:underline">Testimonials</a>
-                        <a href="#gallery" className="block hover:underline">Gallery</a>
-                        <a href="#contact" className="block hover:underline">Contact</a>
-                    </nav>
-                </div>
-            </aside>
+                    {/* Contact Info */}
+                    <div className="hidden md:flex flex-col items-center">
+                        <span className="mr-2">Have Any Questions?</span>
+                        <div className="flex items-center">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6 text-orange-500 mr-2"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M3 8l7.89 7.89a1 1 0 001.32 0L21 8m-9-5v10"
+                                />
+                            </svg>
+                            <span className="font-bold text-white">
+                                +1 862 235 6540
+                            </span>
+                        </div>
+                    </div>
 
-            {/* Overlay for Sidebar */}
-            {isSidebarOpen && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-50 z-10 sm:hidden"
-                    onClick={toggleSidebar}
-                ></div>
-            )}
-        </>
+                    {/* Hamburger Icon (Mobile Only) */}
+                    <button
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        className="md:hidden"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Navigation Section */}
+                <nav
+                    className={`${menuOpen ? "block" : "hidden"} rounded lg:w-[75%] md:w-[100%] w-full  md:block overflow-hidden m-auto shadow-lg px-[20px] bg-white text-black py-4`}
+                >
+                    <ul className="flex flex-col md:flex-row justify-around md:justify-center m-auto items-center w-[fit-content] space-y-2 md:space-y-0 sm:space-x-2 lg:space-x-9 md:space-x-7">
+                        {[
+                            "Home",
+                            "About Us",
+                            "Our Programs",
+                            "Our Gallery",
+                            "News & Events",
+                            "Contact Us",
+                        ].map((item) => (
+                            <li key={item}>
+                                <a
+                                    href="#"
+                                    className="hover:border-blue-500 font-bold py-[10px] hover:text-blue-900 border-transparent border-b-2 transition-colors duration-300 truncate w-[20px]"
+                                >
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            </div>
+        </header>
     );
 };
 
