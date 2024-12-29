@@ -39,7 +39,7 @@ const Header = () => {
                                 />
                             </svg>
                             <span className="font-bold text-white">
-                                +23409012749504
+                                +234-9012749504
                             </span>
                         </div>
                     </div>
