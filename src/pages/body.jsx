@@ -21,17 +21,13 @@ const Home = () => {
             <HeroSection />
             <main className="container mx-auto px-8">
                 <AboutSection />
-                <ServicesSection />
                 <Properties />
                 <Locations />
                 <CompareDemo />
-                <TestimonialsSection />
                 <GallerySection />
                 <AnimatedTestimonialsDemo />
-                <GallerySection />
                 <Blog />
                 <VideoSection />
-                <ContactSection />
             </main>
             <Footer />
         </div>

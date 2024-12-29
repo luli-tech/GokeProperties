@@ -53,7 +53,7 @@ const Loader = () => {
     if (!isLoading) return null; // Loader will disappear after the text is typed and delay ends
 
     return (
-        <div className="fixed inset-0 bg-blue-900 text-white flex flex-col items-center justify-center z-50">
+        <div className="fixed inset-0 bg-blue-900 text-white flex flex-col items-center justify-center z-[100000]">
             {/* Typewriting effect text */}
             <h1 className="text-3xl font-bold mb-4">{typedText}</h1>
 

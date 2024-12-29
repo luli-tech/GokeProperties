@@ -21,20 +21,7 @@ const AboutSection = () => {
 
                     We sell a piece of land with peace of mind!
                 </p>
-                <p className="text-gray-700 leading-relaxed">
 
-                    GokeProperties help people build their REAL ESTATE portfolio by partnering with reputable Real Estate companies that give credible offers which comes with outright/instalment payment plans —that are not only affordable, but also, properly documented; and with our properties in strategic locations across Ibadan, Abeokuta and Lagos State.
-
-                    We sell a piece of land with peace of mind!
-                    <a
-                        href="https://www.freepik.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-red-600 underline ml-1"
-                    >
-                        GokeProperties
-                    </a>
-                </p>
             </div>
         </section>
     );
