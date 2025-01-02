@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import HangingCard from "./hangingCard";
+import { TypewriterEffectDemo } from "../aceternity/heroSection.jsx/hero";
 
 const HeroSection = () => {
     return (
@@ -31,13 +32,14 @@ const HeroSection = () => {
                         ></path>
                     </svg>
                 </a>
-                <h1 className="mb-4 text-4xl mt-[50px] font-sans font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                    We buy, we sell, we make you happy
+                <h1 className="mb-10 text-4xl mt-[50px] font-sans font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                    {/* We buy, we sell, we make you happy */}
+                    Welcome!
                 </h1>
-                <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+                {/* <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                     Here at Goke Properties, we focus on markets where investment, innovation, and capital can unlock long-term value and drive economic growth.
-                </p>
-                <motion.div
+                </p> */}
+                {/* <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
@@ -74,8 +76,9 @@ const HeroSection = () => {
                             <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
                         </svg>
                         Watch video
-                    </a>
-                </motion.div>
+                    </a> */}
+                {/* </motion.div> */}
+                <TypewriterEffectDemo />
             </motion.div>
             <div className="hidden md:block md:absolute md:bottom-[-5]  md:left-1/2 md:transform md:-translate-x-1/2 m-auto">
                 <HangingCard />
