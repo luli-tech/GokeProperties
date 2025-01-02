@@ -27,7 +27,7 @@ const Home = () => {
             {/* <Loader /> */}
             <Header />
             <HeroSection />
-            <div className="lg:hidden mb-[50px] md:hidden" data-aos="fade-up">
+            <div className="lg:hidden mt-10 mb-[50px] md:hidden" data-aos="fade-up">
                 <HangingCard />
             </div>
             <main className="container lg:flex-col lg:w-[70%] mx-auto px-5">
