@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import Marquee from "../components/HomeComponent/brandLogo";
 import AboutSection from "../components/HomeComponent/about";
 import Footer from "../components/HomeComponent/footer";
 import GallerySection from "../components/HomeComponent/gallery";
@@ -27,10 +27,10 @@ const Home = () => {
             {/* <Loader /> */}
             <Header />
             <HeroSection />
-            <div className="lg:hidden md:hidden" data-aos="fade-up">
+            <div className="lg:hidden mb-[50px] md:hidden" data-aos="fade-up">
                 <HangingCard />
             </div>
-            <main className="container mx-auto px-5">
+            <main className="container lg:flex-col lg:w-[70%] mx-auto px-5">
                 <section data-aos="fade-right">
                     <AboutSection />
                 </section>
@@ -40,6 +40,7 @@ const Home = () => {
                 <section data-aos="zoom-in">
                     <Locations />
                 </section>
+                <Marquee />
                 <section data-aos="flip-up">
                     <CompareDemo />
                 </section>

@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.logo-slide img {
+  height: 50px;
+  margin: 0 10px;
+}
+.logo-slide {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  animation: 4s logo infinite linear;
+}
+.marquee:hover .logo-slide {
+  animation-play-state: paused;
+}
+.marquee {
+  overflow: hidden;
+  padding: 20px 0;
+}
+@keyframes logo {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

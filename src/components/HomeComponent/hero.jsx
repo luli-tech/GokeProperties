@@ -80,7 +80,7 @@ const HeroSection = () => {
                 {/* </motion.div> */}
                 <TypewriterEffectDemo />
             </motion.div>
-            <div className="hidden md:block md:absolute md:bottom-[-5]  md:left-1/2 md:transform md:-translate-x-1/2 m-auto">
+            <div className="hidden md:block md:absolute md:top-[50]  md:left-1/2 md:transform md:-translate-x-1/2 m-auto">
                 <HangingCard />
             </div>
 
