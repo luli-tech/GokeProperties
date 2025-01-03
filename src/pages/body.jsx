@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import FAQ from "../components/HomeComponent/faq";
 import Marquee from "../components/HomeComponent/brandLogo";
 import AboutSection from "../components/HomeComponent/about";
 import Footer from "../components/HomeComponent/footer";
@@ -9,7 +10,6 @@ import Header from "../components/HomeComponent/header";
 import HeroSection from "../components/HomeComponent/hero";
 import VideoSection from "../components/HomeComponent/video";
 import Properties from "../components/HomeComponent/Properties";
-import Loader from "../components/HomeComponent/Loader";
 import Blog from "../components/HomeComponent/blog";
 import Locations from "../components/HomeComponent/location";
 import AnimatedTestimonialsDemo from "../components/HomeComponent/demo";
@@ -40,21 +40,26 @@ const Home = () => {
                 <section data-aos="zoom-in">
                     <Locations />
                 </section>
-                <Marquee />
+                <section data-aos="zoom-in">
+                    <Marquee />
+                </section>
                 <section data-aos="flip-up">
                     <CompareDemo />
                 </section>
                 <section data-aos="fade-up">
                     <GallerySection />
                 </section>
-                <section data-aos="zoom-in">
+                {/* <section data-aos="zoom-in">
                     <AnimatedTestimonialsDemo />
-                </section>
+                </section> */}
                 <section data-aos="fade-up">
                     <Blog />
                 </section>
                 <section data-aos="flip-left">
                     <VideoSection />
+                </section>
+                <section data-aos="fade-down">
+                    <FAQ />
                 </section>
             </main>
             <section data-aos="flip-left">

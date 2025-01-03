@@ -2,7 +2,7 @@ import "./brand.css";
 
 const Marquee = () => {
     return (
-        <section id="partnered-brands" className="py-16 rounded-3xl bg-gray-100">
+        <section id="partnered-brands" className="py-16 mt-[70px] rounded-3xl bg-gray-100">
             <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-gray-800">Our Partnered Brands</h2>
                 <p className="text-lg text-gray-600 mt-4 px-4">

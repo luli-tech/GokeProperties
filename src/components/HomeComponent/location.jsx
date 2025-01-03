@@ -2,7 +2,7 @@ import AnimatedTestimonialsDemo from "./demo";
 
 const Locations = () => {
     return (
-        <section id="properties" className="py-16">
+        <section id="properties" className="py-15">
             <h2 className="text-3xl font-bold text-center mb-8">Location</h2>
             <div className="text-center mb-12 px-4">
                 <p className="text-lg text-gray-700">
