@@ -8,8 +8,9 @@ const HangingCard = () => {
     }, []);
 
     return (
-        <div className="m-auto mt-[0px] md:flex-row flex flex-col md:justify-center items-center md:items-stretch space-x-0 md:space-x-5 md:space-y-0 space-y-5 min-h-screen">
+        <div className="m-auto md:flex-row flex flex-col md:justify-center items-center md:items-stretch space-x-0 md:space-x-5 md:space-y-0 space-y-5 min-h-screen">
             {/* Card 1 */}
+            <h1 className="md:hidden font-extrabold text-2xl">Our Services</h1>
             <div
                 className="bg-white md:max-h-[200px] rounded-lg shadow-lg p-4 text-center flex-none basis-[250px] w-[90%] h-full overflow-hidden"
                 data-aos="fade-up"
@@ -21,7 +22,7 @@ const HangingCard = () => {
                         className="mx-auto"
                     />
                 </div>
-                <h2 className="text-xl font-bold mb-2">Scholarships</h2>
+                <h2 className="text-xl font-bold mb-2">Buy Land</h2>
                 <p className="text-gray-600 w-[90%] truncate mb-3">
                     For students at all levels of education, including opportunities
                     to study abroad.
@@ -43,7 +44,7 @@ const HangingCard = () => {
                         className="mx-auto"
                     />
                 </div>
-                <h2 className="text-xl font-bold mb-2">Social Supports</h2>
+                <h2 className="text-xl font-bold mb-2">Sell Land</h2>
                 <p className="text-gray-600 w-[90%] truncate mb-3">
                     For those who face emotional, financial, and social challenges.
                 </p>
@@ -65,7 +66,7 @@ const HangingCard = () => {
                     />
                 </div>
                 <h2 className="text-xl font-bold mb-2">
-                    Developmental Projects
+                    Rent Land
                 </h2>
                 <p className="text-gray-600 w-[90%] truncate mb-3">
                     Designed to uplift communities, focusing on sustainability and
