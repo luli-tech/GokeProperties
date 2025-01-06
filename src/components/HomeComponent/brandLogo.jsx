@@ -3,14 +3,14 @@ import "./brand.css";
 
 const Marquee = () => {
     const logos = [
-        "https://cdn.filestackcontent.com/6A6K9WFGRnqW602d3HAk",
-        "https://cdn.filestackcontent.com/6A6K9WFGRnqW602d3HAk",
-        "https://cdn.filestackcontent.com/6A6K9WFGRnqW602d3HAk",
-        "https://cdn.filestackcontent.com/6A6K9WFGRnqW602d3HAk",
-        "https://cdn.filestackcontent.com/6A6K9WFGRnqW602d3HAk",
-        "https://cdn.filestackcontent.com/6A6K9WFGRnqW602d3HAk",
-        "https://cdn.filestackcontent.com/6A6K9WFGRnqW602d3HAk",
-        "https://cdn.filestackcontent.com/6A6K9WFGRnqW602d3HAk",
+        "https://cdn.filestackcontent.com/EZpTwkn5RAe5vscpXCtW",
+        "https://cdn.filestackcontent.com/RuUh7CdATvCLKP7PYM9b",
+        "https://cdn.filestackcontent.com/EZpTwkn5RAe5vscpXCtW",
+        "https://cdn.filestackcontent.com/RuUh7CdATvCLKP7PYM9b",
+        "https://cdn.filestackcontent.com/EZpTwkn5RAe5vscpXCtW",
+        "https://cdn.filestackcontent.com/RuUh7CdATvCLKP7PYM9b",
+        "https://cdn.filestackcontent.com/EZpTwkn5RAe5vscpXCtW",
+        "https://cdn.filestackcontent.com/RuUh7CdATvCLKP7PYM9b",
     ];
 
     return (
