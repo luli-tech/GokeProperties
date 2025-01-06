@@ -34,7 +34,7 @@ const AboutSection = () => {
                 data-aos="fade-left" // AOS animation for image section
             >
                 <img
-                    src="https://via.placeholder.com/300" // Replace with your actual image URL
+                    src="https://cdn.filestackcontent.com/9JaF1kvlRwS9Si6dh0js"
                     alt="About Foundation"
                     className="rounded-md w-full md:w-96 object-cover"
                 />
